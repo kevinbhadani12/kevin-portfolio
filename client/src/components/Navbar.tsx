@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" }
+  { label: "Contact", href: "#contact-form" }
 ];
 
 export default function Navbar() {
