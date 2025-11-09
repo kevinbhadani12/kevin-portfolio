@@ -1,8 +1,14 @@
+import "dotenv/config";
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+
+// Default to development if NODE_ENV is not set (helps with Windows compatibility)
+if (!process.env.NODE_ENV) {
+  process.env.NODE_ENV = "development";
+}
 
 declare module 'http' {
   interface IncomingMessage {
