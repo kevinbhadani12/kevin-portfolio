@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+        // GitHub Pages 404.html redirect for client-side routing
+        // Redirect to index.html which will handle the routing via React Router
+        const basePath = '/kevin-portfolio/';
+        const path = window.location.pathname;
+
+        // Preserve query string and hash
+        const query = window.location.search;
+        const hash = window.location.hash;
+
+        // Redirect to index.html
+        window.location.replace(basePath + 'index.html' + query + hash);
+    </script>
+</head>
+
+<body>
+    <p>Redirecting...</p>
+</body>
+
+</html>
