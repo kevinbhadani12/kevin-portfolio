@@ -5,7 +5,6 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Education from "@/components/Education";
 import DownloadResume from "@/components/DownloadResume";
-import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
         <Projects />
         <Education />
         <DownloadResume />
-        <ContactForm />
         <Footer />
       </main>
     </div>
