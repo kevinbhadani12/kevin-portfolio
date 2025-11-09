@@ -1,0 +1,51 @@
+KEVIN BHADANI
+kevinbhadani2121@gmail.com • + 91-6354116990 • linkedin.com/in/kevinbhadani • Ahmedabad, Gujarat
+PROFESSIONAL SUMMARY
+Python Developer & Automation Engineer with hands-on experience in web/app scraping, automation workflows,
+and data engineering. Currently working at MeasureOne as an Associate Software Engineer, building automation
+using Node.js and Puppeteer for login-based scraping on insurance, education, and employment platforms, including
+document and policy downloads. Previously at X-Byte Enterprises Crawling, delivered large-scale scraping projects
+across e-commerce, social media, travel, government, and real estate domains. Skilled in designing reliable, scalable
+solutions and solving complex data challenges.
+TECHNICAL SKILLS
+• Programming: Python, Node.js
+• Web & App Scraping: Scrapy, Requests, Beautiful Soup, Selenium, Playwright, Puppeteer, Appium
+• Data Handling: Pandas, Numpy, Data
+• API Testing Tools: Postman, Fiddler, HTTP Toolkit
+• Databases: MongoDB, MySQL, PostgreSQL
+• Cloud: AWS Lambda, S3
+• API Development: FastAPI (Basic)
+EXPERIENCE
+Associate Software Engineer | MeasureOne | Ahmedabad, India Feb 2025 – Present
+(Joined as Sr. Analyst; promoted within 3 months to reflect actual responsibilities)
+• Developed automation workflows using Node.js and Puppeteer for login-based scraping on insurance,
+education, and employment platforms.
+• Automated document and policy downloads, reducing manual work and improving data verification.
+• Applied advanced methods to bypass Cloudflare and CAPTCHA protections for smooth automation.
+• Designed scalable automation pipelines for high accuracy and efficiency
+Python Developer | X-Byte Enterprise Crawling | Ahmedabad, India Dec 2021 - Feb 2025
+• Built and automated web scraping solutionsto extract data daily, weekly, and monthly from various
+sources, including e-commerce, travel, social media, government sites and more. ( Ex: Twitter,
+Amazon, Zomato, TikTok, Expedia, LinkedIn, Facebook, Google Map and more)
+• Delivered data in structured formats ( CSV, XLSX,JSON ) and integrated with cloud platformslike AWS
+S3 for seamless storage and access.
+• Created and maintained APIsfor data extraction and integration, improving operational efficiency and
+enabling real-time data delivery.
+• Built and automated scraping pipelines, integrating APIs and frameworksto streamline data collection,
+reduce manual intervention, and enhance reporting accuracy.
+• Developed strategiesto overcome anti-scrapingmeasures ( CAPTCHA, IP blocking, dynamic content )
+ensuring continuous data extraction.
+Automated recurring tasks,such as extracting location wise data from Facebook Marketplace and video
+downloads from TikTok, optimizing workflows.
+• Optimized scraping performance using rotating proxies, headless browsers, and asynchronous
+processing to improve speed and data accuracy.
+Key Projects at X-Byte:
+• Review Aggregation API: Collected reviews from Trustpilot, Google Maps, and Yelp into a unified API.
+• E-commerce Affiliate Automation: Scraped products and auto-posted to Pinterest for affiliate
+marketing.
+• Multi-Store App Scraping: Extracted offers, prices, and reviews from apps like PhonePe and Zomato
+using Appium.
+EDUCATION
+Gujarat Technological University, Bachelor of Engineering 2018 - 2022
+• Information and Technology
+• Grade: 8.46 CGPA
