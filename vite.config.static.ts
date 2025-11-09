@@ -8,6 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
   plugins: [react()],
   base: "/kevin-portfolio/", // Repository name for GitHub Pages
+  root: path.resolve(__dirname, "client"), // Set root to client directory
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client/src"),
@@ -16,7 +17,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "dist",
+    outDir: path.resolve(__dirname, "dist"), // Output to project root dist folder
     emptyOutDir: true,
     sourcemap: false,
     rollupOptions: {
