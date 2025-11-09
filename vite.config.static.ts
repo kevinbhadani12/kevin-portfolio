@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
-  base: "./", // Use relative paths for GitHub Pages
+  base: "/kevin-portfolio/", // Repository name for GitHub Pages
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client/src"),
