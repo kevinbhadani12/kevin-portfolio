@@ -60,7 +60,7 @@ export default function Navbar() {
             {/* Logo container */}
             <div className="relative">
               <img 
-                src="/profile-image.jpg" 
+                src={`${import.meta.env.BASE_URL || '/'}profile-image.jpg`}
                 alt="Kevin Bhadani" 
                 className="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover border-2 border-primary/50 shadow-sm group-hover:shadow-md group-hover:border-primary transition-all duration-300"
                 onError={(e) => {

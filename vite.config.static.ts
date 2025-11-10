@@ -25,7 +25,6 @@ export default defineConfig({
         main: path.resolve(__dirname, "client/index.html"),
       },
     },
-    copyPublicDir: false, // We'll handle 404.html manually
   },
-  publicDir: false, // Don't use public dir, we'll copy 404.html manually
+  publicDir: path.resolve(__dirname, "client/public"), // Copy public assets including images
 });
