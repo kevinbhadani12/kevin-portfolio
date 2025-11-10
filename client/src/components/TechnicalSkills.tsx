@@ -16,6 +16,10 @@ const skillCategories: SkillCategory[] = [
     skills: ["Scrapy", "Requests", "Beautiful Soup", "Selenium", "Playwright", "Puppeteer", "Appium"]
   },
   {
+    title: "Agentic AI & Automation",
+    skills: ["n8n", "Workflow Automation", "AI Agents", "Process Orchestration", "Task Automation"]
+  },
+  {
     title: "Data Handling",
     skills: ["Pandas", "NumPy", "Data Processing", "ETL Pipelines"]
   },

@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code2, Workflow, Smartphone } from "lucide-react";
+import { Code2, Workflow, Smartphone, Bot, Zap } from "lucide-react";
 
 interface Project {
   title: string;
@@ -9,9 +9,42 @@ interface Project {
   keyFeatures: string[];
   technologies: string[];
   icon: typeof Code2;
+  image?: string;
 }
 
 const projects: Project[] = [
+  {
+    title: "Intelligent Workflow Automation with n8n",
+    description: "Built a comprehensive agentic AI system using n8n to automate complex business workflows, integrating multiple APIs, databases, and AI services for intelligent decision-making and task execution.",
+    detailedDescription: "Developed an advanced workflow automation platform using n8n that orchestrates complex business processes with AI-powered decision making. The system integrates multiple data sources, APIs, and AI services to create intelligent automation workflows. Implemented custom n8n nodes for specialized integrations, error handling, and retry mechanisms. The solution handles data transformation, conditional logic, and multi-step processes with real-time monitoring and alerting capabilities. Features include dynamic workflow execution, API rate limiting, and comprehensive logging for audit trails.",
+    keyFeatures: [
+      "Agentic AI workflows with intelligent decision-making",
+      "Multi-service integration (APIs, databases, AI models)",
+      "Custom n8n nodes for specialized integrations",
+      "Real-time monitoring and alerting",
+      "Error handling and retry mechanisms",
+      "Dynamic workflow execution based on conditions"
+    ],
+    technologies: ["n8n", "Node.js", "API Integration", "Workflow Automation", "AI Agents"],
+    icon: Bot,
+    image: "/projects/n8n-workflow.jpg"
+  },
+  {
+    title: "AI-Powered Data Processing Pipeline",
+    description: "Created an intelligent data processing system using n8n that automatically extracts, transforms, and enriches data from multiple sources using AI agents for classification and analysis.",
+    detailedDescription: "Built an end-to-end data processing pipeline using n8n that leverages AI agents for intelligent data extraction and enrichment. The system automatically collects data from various sources including web APIs, databases, and file systems. AI agents classify, validate, and enrich the data before storing it in structured formats. The workflow includes data quality checks, duplicate detection, and automated reporting. The solution significantly reduces manual data processing time while improving accuracy through AI-powered validation.",
+    keyFeatures: [
+      "AI-powered data classification and enrichment",
+      "Multi-source data collection and aggregation",
+      "Automated data quality validation",
+      "Duplicate detection and deduplication",
+      "Structured data storage and reporting",
+      "Real-time processing with scheduled batch jobs"
+    ],
+    technologies: ["n8n", "Python", "AI/ML", "Data Processing", "ETL Pipelines"],
+    icon: Zap,
+    image: "/projects/ai-pipeline.jpg"
+  },
   {
     title: "Review Aggregation API",
     description: "Built a unified API that collects and aggregates customer reviews from multiple platforms including Trustpilot, Google Maps, and Yelp, providing businesses with comprehensive feedback analytics.",
@@ -24,7 +57,8 @@ const projects: Project[] = [
       "MongoDB for scalable data storage"
     ],
     technologies: ["Python", "FastAPI", "BeautifulSoup", "Selenium", "MongoDB"],
-    icon: Code2
+    icon: Code2,
+    image: "/projects/review-api.jpg"
   },
   {
     title: "E-commerce Affiliate Automation",
@@ -38,7 +72,8 @@ const projects: Project[] = [
       "Intelligent scheduling system"
     ],
     technologies: ["Python", "Scrapy", "Pinterest API", "AWS S3", "Scheduling"],
-    icon: Workflow
+    icon: Workflow,
+    image: "/projects/ecommerce-automation.jpg"
   },
   {
     title: "Multi-Store App Scraping",
@@ -52,7 +87,8 @@ const projects: Project[] = [
       "Multi-device support"
     ],
     technologies: ["Python", "Appium", "Mobile Automation", "Data Processing"],
-    icon: Smartphone
+    icon: Smartphone,
+    image: "/projects/app-scraping.jpg"
   }
 ];
 
@@ -82,6 +118,21 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-accent/0 group-hover:from-primary/5 group-hover:via-primary/5 group-hover:to-accent/5 transition-all duration-300 pointer-events-none" />
                 
                 <div className="relative p-6 md:p-8">
+                  {/* Project Image */}
+                  {project.image && (
+                    <div className="mb-6 rounded-lg overflow-hidden border border-border/50 group-hover:border-primary/50 transition-colors">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                        }}
+                      />
+                    </div>
+                  )}
+                  
                   {/* Header */}
                   <div className="flex items-start gap-4 mb-6">
                     <div className="p-3 md:p-4 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">

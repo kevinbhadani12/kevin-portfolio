@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
+  { label: "Available For", href: "#looking-for" },
   { label: "Contact", href: "#contact" }
 ];
 
@@ -50,31 +51,43 @@ export default function Navbar() {
       data-testid="nav-navbar"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-18">
+        <div className="flex items-center justify-between h-16 md:h-20">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2.5 hover-elevate px-3 py-2 rounded-lg transition-all hover:scale-105 active:scale-95"
+            className="group flex items-center gap-3 px-3 py-2 rounded-lg transition-all hover:bg-primary/5 active:scale-95 relative"
             data-testid="button-logo"
           >
-            <img 
-              src="/profile-image.jpg" 
-              alt="Kevin Bhadani" 
-              className="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover border-2 border-primary/30 shadow-md ring-2 ring-primary/10"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                const parent = target.parentElement;
-                if (parent && !parent.querySelector('.fallback-initials')) {
-                  const fallback = document.createElement('span');
-                  fallback.className = 'fallback-initials w-9 h-9 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm md:text-base shadow-md';
-                  fallback.textContent = 'KB';
-                  parent.appendChild(fallback);
-                }
-              }}
-            />
-            <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent hidden sm:inline-block">
-              Kevin Bhadani
-            </span>
+            {/* Logo container */}
+            <div className="relative">
+              <img 
+                src="/profile-image.jpg" 
+                alt="Kevin Bhadani" 
+                className="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover border-2 border-primary/50 shadow-sm group-hover:shadow-md group-hover:border-primary transition-all duration-300"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent && !parent.querySelector('.fallback-initials')) {
+                    const fallback = document.createElement('span');
+                    fallback.className = 'fallback-initials w-10 h-10 md:w-11 md:h-11 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white font-bold text-sm md:text-base shadow-sm group-hover:shadow-md transition-all duration-300';
+                    fallback.textContent = 'KB';
+                    parent.appendChild(fallback);
+                  }
+                }}
+              />
+            </div>
+            
+            {/* Name with distinct colors */}
+            <div className="flex flex-col items-start hidden sm:flex">
+              <div className="flex items-baseline gap-1">
+                <span className="text-base md:text-lg font-bold text-primary">
+                Kevin Bhadani
+                </span>
+              </div>
+              <span className="text-xs text-muted-foreground font-medium hidden md:block">
+                Automation Engineer
+              </span>
+            </div>
           </button>
           
           <div className="hidden md:flex items-center gap-1 bg-card/50 backdrop-blur-sm rounded-full px-2 py-1 border border-border/50">
